@@ -7,18 +7,18 @@ import { useState, useEffect } from 'react';
 const Weather = () => {
     const [city, setCity] = useState("")
 
-    //  const SearchCity = () => {
-    //    try{
-    //         axios.get(
-    //             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=91dd9acfc6da1b22dec07cea91f20cc0&units=metric`)
-    //             .then((res) => {
-    //                 console.log(res.data)
-    //             })
-    //    }
-    //    catch(error){
-    //       console.log(error)
-    //    }
-    //  }
+     const SearchCity = () => {
+       try{
+            axios.get(
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=91dd9acfc6da1b22dec07cea91f20cc0&units=metric`)
+                .then((res) => {
+                    console.log(res.data)
+                })
+       }
+       catch(error){
+          console.log(error)
+       }
+     }
 
     return (
         <>
