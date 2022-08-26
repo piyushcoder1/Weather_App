@@ -1,3 +1,15 @@
+
+.Searching {
+  background-color: transparent;
+  border-radius: 20%;
+  border: transparent;
+}
+.Searching:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
