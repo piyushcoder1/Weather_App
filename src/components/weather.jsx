@@ -64,7 +64,7 @@ const Weather = () => {
     };
   };
 
-  const optimizedVersion = useCallback(debouncer(handleChange), []);
+  const optimize = useCallback(debouncer(handleChange), []);
 
   useEffect(() => {
     getData();
@@ -90,7 +90,7 @@ const Weather = () => {
           <div className="input">
             <input
               type="text"
-              onChange={(e) => optimizedVersion(e)}
+              onChange={(e) => optimize(e)}
               // value={""}
               className="inputBox"
               placeholder="enter your city"
