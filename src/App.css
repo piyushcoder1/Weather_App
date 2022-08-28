@@ -7,49 +7,58 @@
   pointer-events: none;
 }
 
-.container {
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Container {
+  width: 70%;
+  margin: auto;
+}
+.search {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-radius: 7px;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.divs {
+  width: 40px;
+  margin-left: 5px;
+  position: relative;
+}
+.divs > img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 60%;
   margin: auto;
+  position: absolute;
 }
-.searchbox{
-  display: flex;
-  width: 55%;
+.input {
+  width: 100%;
+}
+.searchIcon {
+  width: 40px;
+  margin-right: 5px;
+  position: relative;
+}
+.searchIcon> img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
   margin: auto;
-  margin-top: 15px;
-  margin-bottom: 40px;
-  border: 1px solid whitesmoke;
+  position: absolute;
 }
-.icon{
-  width: 50px;
-  border: transparent;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-button > img{
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-}
-
-button > img:hover {
-  width: 100%;
-  height: 100%;
-}
-
-.Searching {
-  background-color: transparent;
-  border-radius: 20%;
-  border: transparent;
-}
-.Searching:hover {
-  cursor: pointer;
-  color: white;
-  background-color: black;
-}
-
-.input{
- width: 90%;
+.inputBox {
+  width: 90%;
  margin: auto;
  height: 50px;
  padding: 0px 40px;
@@ -58,6 +67,63 @@ button > img:hover {
  border-radius: 6px;
  cursor: pointer;
  border: transparent;
+}
+.sevenDays {
+  gap: 0.8%;
+  display: grid;
+  margin: 30px 0;
+  grid-template-columns: repeat(8, 2fr);
+}
+.sevenDays > div {
+  height: 230px;
+  padding: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #93c4d1;
+}
+.sevenDays > div:focus {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #88cbd6;
+}
+
+
+.sevenDays > div:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #9cced1;
+}
+.temp {
+  padding: 5px;
+  display: flex;
+  font-size: 21px;
+  justify-content: space-between;
+}
+.sevenDays > div > p {
+  font-size: 20px;
+}
+.graph {
+  width: 70%;
+  height: 55%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 8px;
+ 
+}
+.pressur_humidity {
+  width: 50%;
+  display: flex;
+  margin: auto;
+}
+.pressur_humidity > div {
+  width: 50%;
+  padding: 15px;
+  margin: auto;
+}
+.graph > div:nth-child(2) > div {
+  background-color: #dffff4;
 }
 
 .mapbox{
