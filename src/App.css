@@ -144,6 +144,29 @@
 }
 
 
+@media screen and (max-width: 600px) {
+   .search{
+    width: 90%;
+   }
+
+   .sevenDays{
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+   }
+
+   .pressur_humidity{
+    width: 90%;
+   }
+   .graph{
+    width: 350px;
+   }
+   .mapbox{
+    width: 350px;
+   }
+   
+
+}
+
 
 
 @media (prefers-reduced-motion: no-preference) {
