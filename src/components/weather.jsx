@@ -5,11 +5,13 @@ import axios from "axios";
 import { useState, useEffect ,useCallback} from 'react';
 import Chart from "react-apexcharts";
 
+
 const Weather = () => {
   const [city, setcity] = useState("");
   const [daily, setDaily] = useState([]);
   const [weatherIcon, setWeatherIcon] = useState();
   const [weather, setWeather] = useState([]);
+
 
   const dailyData = (e) => {
     let arr = e.temp;
@@ -17,11 +19,15 @@ const Weather = () => {
     setWeatherIcon(e.weather[0].icon);
     setDaily(arr);
   };
+
+
   useEffect(() => {
     axios.get("https://ipinfo.io/json?token=174ebe99b0714d").then((res) => {
       setcity(res.data.city);
     });
   }, []);
+
+  ///data for day
 
   const getData = async () => {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=91dd9acfc6da1b22dec07cea91f20cc0`;
@@ -36,6 +42,8 @@ const Weather = () => {
     }
   };
 
+       ///// seven days data to fetch
+
   const get7days = async (lat, lon) => {
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=91dd9acfc6da1b22dec07cea91f20cc0`;
     try {
@@ -47,6 +55,10 @@ const Weather = () => {
       console.log(error);
     }
   };
+
+
+  /////debouncer code 
+
 
   const handleChange = (e) => {
     setcity(e.target.value);
@@ -64,11 +76,14 @@ const Weather = () => {
     };
   };
 
+
   const optimize = useCallback(debouncer(handleChange), []);
 
   useEffect(() => {
     getData();
   }, [city]);
+
+  ////loaction data
 
   const Livelocation = () => {
     axios.get("https://ipinfo.io/json?token=174ebe99b0714d").then((res) => {
@@ -100,6 +115,9 @@ const Weather = () => {
             <img src="img/search-icon.webp" alt="search icon" />
           </div>
         </div>
+                  
+                  {/* seven days date to fetch */}
+        
         <div className="sevenDays">
           {weather.daily ? (
             weather.daily.map((el, index) => (
@@ -121,9 +139,9 @@ const Weather = () => {
           )}
         </div>
 
-        <div className="pressur_humidity">
+        {/* pressur humidity   data  */}
 
-          
+         <div className="pressur_humidity">
             <div>
               <h3>Pressure</h3>
               <p>1001 hpa</p>
@@ -143,6 +161,9 @@ const Weather = () => {
               <p>6:45 PM</p>
             </div>
           </div>
+
+                   {/* graph data  */}
+
         <div className="graph">
           {weather.daily ? (
             <div>
@@ -225,6 +246,7 @@ const Weather = () => {
             )}
           </div>
         </div>
+              {/* google maps  */}
         <div className="mapbox">
             <iframe
           title="map"
