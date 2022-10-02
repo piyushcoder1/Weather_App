@@ -252,6 +252,7 @@ const Weather = () => {
           title="map"
           name="map"
           className="map"
+          
           src={`https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
         ></iframe>
         </div>
