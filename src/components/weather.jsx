@@ -42,6 +42,8 @@ const Weather = () => {
     }
   };
 
+  
+
        ///// seven days data to fetch
 
   const get7days = async (lat, lon) => {
@@ -77,7 +79,7 @@ const Weather = () => {
   };
 
 
-  
+
 
   const optimize = useCallback(debouncer(handleChange), []);
 
