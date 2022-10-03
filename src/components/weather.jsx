@@ -13,12 +13,15 @@ const Weather = () => {
   const [weather, setWeather] = useState([]);
 
 
+
+  
   const dailyData = (e) => {
     let arr = e.temp;
     console.log(e);
     setWeatherIcon(e.weather[0].icon);
     setDaily(arr);
   };
+
 
 
   useEffect(() => {
@@ -42,7 +45,7 @@ const Weather = () => {
     }
   };
 
-  
+
 
        ///// seven days data to fetch
 
