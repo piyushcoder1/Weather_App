@@ -77,6 +77,8 @@ const Weather = () => {
   };
 
 
+  
+
   const optimize = useCallback(debouncer(handleChange), []);
 
   useEffect(() => {
@@ -84,7 +86,7 @@ const Weather = () => {
   }, [city]);
 
   ////loaction data
-  
+
 
   const Livelocation = () => {
     axios.get("https://ipinfo.io/json?token=174ebe99b0714d").then((res) => {
