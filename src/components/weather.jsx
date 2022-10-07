@@ -111,6 +111,8 @@ const Weather = () => {
         </div>
                   
                   {/* seven days date to fetch */}
+
+
         
         <div className="sevenDays">
           {weather.daily ? (
@@ -135,6 +137,9 @@ const Weather = () => {
 
         {/* pressur humidity   data  */}
 
+
+
+
          <div className="pressur_humidity">
             <div>
               <h3>Pressure</h3>
@@ -157,6 +162,8 @@ const Weather = () => {
           </div>
 
                    {/* graph data  */}
+
+
 
         <div className="graph">
           {weather.daily ? (
@@ -240,7 +247,13 @@ const Weather = () => {
             )}
           </div>
         </div>
+
+
+
               {/* google maps  */}
+
+
+              
         <div className="mapbox">
             <iframe
           title="map"
