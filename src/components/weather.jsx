@@ -39,10 +39,7 @@ const Weather = () => {
       console.log(error);
     }
   };
-
-
-
-       ///// seven days data to fetch
+      ///// seven days data to fetch
 
   const get7days = async (lat, lon) => {
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=91dd9acfc6da1b22dec07cea91f20cc0`;
@@ -55,7 +52,6 @@ const Weather = () => {
       console.log(error);
     }
   };
-
 
   /////debouncer code 
 
