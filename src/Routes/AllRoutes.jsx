@@ -8,6 +8,7 @@ import Weather from "../components/weather";
 const AllRoutes = () => {
     return (
         <Routes>
+            
             <Route path="/" element={<Weather/>}></Route>
         </Routes>
     )

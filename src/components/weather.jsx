@@ -12,17 +12,12 @@ const Weather = () => {
   const [weatherIcon, setWeatherIcon] = useState();
   const [weather, setWeather] = useState([]);
 
-
-
-  
   const dailyData = (e) => {
     let arr = e.temp;
     console.log(e);
     setWeatherIcon(e.weather[0].icon);
     setDaily(arr);
   };
-
-
 
   useEffect(() => {
     axios.get("https://ipinfo.io/json?token=174ebe99b0714d").then((res) => {
