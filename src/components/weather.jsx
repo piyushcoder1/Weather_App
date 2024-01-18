@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import axios from "axios";
 import { useState, useEffect ,useCallback} from 'react';
@@ -136,31 +134,6 @@ const Weather = () => {
         </div>
 
         {/* pressur humidity   data  */}
-
-
-
-
-         <div className="pressur_humidity">
-            <div>
-              <h3>Pressure</h3>
-              <p>1001 hpa</p>
-            </div>
-            <div>
-              <h3>Humidity</h3>
-              <p>37 %</p>
-            </div>
-          </div>
-          <div className="pressur_humidity">
-            <div>
-              <h3>Sunrise</h3>
-              <p>5:0 AM</p>
-            </div>
-            <div>
-              <h3>Sunset</h3>
-              <p>6:45 PM</p>
-            </div>
-          </div>
-
                    {/* graph data  */}
 
 
@@ -246,22 +219,32 @@ const Weather = () => {
               />
             )}
           </div>
-        </div>
 
-
-
-              {/* google maps  */}
-
-
-              
-        <div className="mapbox">
-            <iframe
-          title="map"
-          name="map"
-          className="map"
           
-          src={`https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-        ></iframe>
+
+         <div className="pressur_humidity">
+            <div>
+              <h3>Pressure</h3>
+              <p>1001 hpa</p>
+            </div>
+            <div>
+              <h3>Humidity</h3>
+              <p>37 %</p>
+            </div>
+          </div>
+          <div className="pressur_humidity">
+            <div>
+              <h3>Sunrise</h3>
+              <p>5:0 AM</p>
+            </div>
+            <div>
+              <h3>Sunset</h3>
+              <p>6:45 PM</p>
+            </div>
+          </div>
+          <div>
+            <img src="img/iiii.png" className="graphDataChart" alt="graphDataChart" />
+          </div>
         </div>
       </div>
     </>

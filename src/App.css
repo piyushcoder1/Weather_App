@@ -7,8 +7,6 @@
   pointer-events: none;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -121,6 +119,9 @@
   width: 50%;
   padding: 15px;
   margin: auto;
+}
+.graphDataChart{
+  width: 100%;
 }
 .graph > div:nth-child(2) > div {
   background-color: #dffff4;
